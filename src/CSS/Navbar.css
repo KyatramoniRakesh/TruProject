@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== TOP BAR ========== */
+.topbar {
+    background: #000;
+    color: #fff;
+    font-size: 17px;
+}
+
+.topbar-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT CONTENT */
+.topbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-left span {
+    margin-right: 25px;
+    white-space: nowrap;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons i {
+    margin-right: 12px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* RIGHT BUTTON */
+.register-btn {
+    background: #ff2b5b;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ========== MAIN NAVBAR ========== */
+.nav-container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO */
+.logo img {
+    height: 55px;
+}
+
+/* MENU */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    /* THIS IS IMPORTANT */
+    margin-left: 60px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    color: #222;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    margin-left: auto;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ======== HOVER BUTTON ========== */
+/* NAV ITEM */
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* MEGA MENU BASE */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50vw;
+
+    background: #fff;
+    border-top: 2px solid #ff2b5b;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.35s ease;
+    z-index: 999;
+
+    margin-top: 1rem;
+}
+
+/* SHOW ON HOVER */
+.has-mega:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* MEGA CONTENT */
+.mega-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* COLUMNS */
+.mega-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff2b5b;
+}
+
+.mega-column a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+    text-decoration: none;
+}
+
+.mega-column a:hover {
+    color: #ff2b5b;
+}
+
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+    .topbar-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        max-width: fit-content;
+    }
+
+    .topbar-left span {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger i {
+        font-size: 26px;
+    }
+
+
+    .nav-links {
+        position: absolute;
+        top: 160px;
+        left: 1rem;
+        width: 100%;
+        background: #fff;
+
+        flex-direction: column;
+        align-items: start;
+        gap: 18px;
+
+        padding: 22px 0;
+        border-top: 1px solid #ddd;
+        z-index: 999;
+        margin-left: 0;
+
+        opacity: 0;
+        transform: translateY(-15px);
+        visibility: hidden;
+
+        transition:
+            opacity 0.35s ease,
+            transform 0.35s ease,
+            visibility 0.35s ease;
+
+        max-width: fit-content;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        display: flex;
+        max-width: fit-content;
+    }
+
+
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .mobile-item {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-item.has-mega {
+        display: none;
+    }
+}
+
+/* ================== MOBILE ACCORDION STYLES (STABLE HEIGHT) ================== */
+@media (max-width: 768px) {
+
+    .mobile-only {
+        width: 100%;
+
+    }
+
+    .mobile-item {
+        width: 100%;
+    }
+
+    /* B.Tech / M.Tech title */
+    .mobile-title {
+        font-size: 14px;
+        font-weight: 500;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    /* First level submenu (DO NOT animate height) */
+    .mobile-submenu {
+        background: #fafafa;
+        padding-left: 0;
+    }
+
+    /* Branch section */
+    .mobile-branch {
+        width: 100%;
+
+    }
+
+    .mobile-branch-title {
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 500;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        cursor: pointer;
+
+    }
+
+    /* Second level links container */
+    .mobile-links {
+        padding-left: 12px;
+    }
+
+    .mobile-links a {
+        display: block;
+        padding: 10px 0;
+        font-size: 14px;
+        color: #555;
+        text-decoration: none;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .mobile-links a:hover {
+        color: #ff2b5b;
+    }
+
+    /* ================== THIRD LEVEL (MAJOR / MINI) ================== */
+
+    .mobile-project {
+        width: 100%;
+    }
+
+    .mobile-project-title {
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        cursor: pointer;
+    }
+
+    /* IMPORTANT: No animation on container height */
+    .mobile-project-links {
+        padding: 6px 60px 14px;
+    }
+
+    .mobile-project-links a {
+        display: block;
+        padding: 8px 0;
+        font-size: 13.5px;
+        color: #666;
+        text-decoration: none;
+    }
+
+    .mobile-project-links a:hover {
+        color: #ff2b5b;
+    }
+}

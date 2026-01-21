@@ -1,0 +1,231 @@
+
+.youtube-cta {
+  width: 100%;
+  min-height: 500px;
+  background: url("../assets//Images/bg-new.png") no-repeat right center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.youtube-cta-container {
+  width: 100%;
+  padding-left: 100px; 
+}
+.youtube-cta-box {
+  max-width: 600px;
+  background: #ef2f55;
+  padding: 45px 40px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.youtube-cta-box p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.youtube-btn {
+  background: #05008a;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;    
+  gap: 6px;
+  margin: 0 auto;
+
+}
+.btn-text{
+    font-size: 20px;
+}
+.btn-icon{
+    font-size: 20px;
+    align-items: center;
+}
+.youtube-btn span{
+    display: inline-flex;
+    align-items: center;
+}
+
+.youtube-btn .btn-icon {
+  transform: translateX(10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+
+.youtube-btn:hover .btn-icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.testimonial {
+    padding: 40px 42px;
+    text-align: center;
+    background: #fff;
+    height: 420px;
+    max-height: 500px;
+}
+
+.testimonial-title {
+    font-size: 28px;
+    color: #ff3b6a;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.testimonial-title::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #ff3b6a;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.testimonial-content img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.testimonial-content b {
+    color: #000;
+}
+
+.test-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.test-arrow:hover {
+    background: rgb(244 240 240 / 60%);
+}
+
+.test-arrow.left {
+    left: -40px;
+}
+
+.test-arrow.right {
+    right: -40px;
+}
+
+
+.testimonial-slider:hover .test-arrow {
+    opacity: 1;
+}
+
+.testimonial-dots {
+    margin-top: 40px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+  .youtube-cta {
+    min-height: auto;
+    padding: 40px 10px;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .youtube-cta-container {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .youtube-cta-box {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .youtube-cta-box p {
+    font-size: 16px;
+  }
+
+  .youtube-btn {
+    margin-top: 10px;
+  }
+
+  
+  .testimonial {
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .test-arrow.left {
+    left: -20px;
+  }
+
+  .test-arrow.right {
+    right: -20px;
+  }
+}
+@media (max-width: 480px) {
+  .youtube-cta {
+    padding: 35px 10px;
+    background-size: 240px;
+  }
+
+  .youtube-cta-box {
+    padding: 30px 20px;
+  }
+
+  .btn-text,
+  .btn-icon {
+    font-size: 18px;
+  }
+
+  .testimonial-title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-content p {
+    font-size: 16px;
+  }
+
+  .testimonial-dots {
+    margin-top: 25px;
+  }
+}
+

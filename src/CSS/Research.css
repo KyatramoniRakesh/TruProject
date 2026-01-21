@@ -1,0 +1,388 @@
+/* Top Banner */
+.top {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.overlay h1 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.paper-section {
+    text-align: center;
+    padding: 60px 15%;
+}
+
+.paper-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.paper-section h2 span {
+    color: #e63946;
+}
+
+.paper-section h4 {
+    margin-top: 15px;
+    color: #555;
+    font-weight: 600;
+}
+
+.paper-section p {
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.paper-section h3 {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+
+.journal-list {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.journal-badge {
+    background: #777;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+
+.publish {
+    padding: 40px 7%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.publish h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.publish h2 span {
+    color: #e63946;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.process-card {
+    background: #fff;
+    padding: 25px 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-no {
+    color: #e63946;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+/* //.publish */
+
+.pub-process {
+  padding: 70px 12%;
+  background: #fff;
+}
+
+.pub-process h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif";
+}
+
+.pub-process h2 span {
+  color: #e63946;
+}
+
+.process-text {
+  padding-left: 20px;
+  text-align: justify;
+}
+
+.process-text li {
+    margin-bottom: 7px;
+    color: #686767;
+    font-size: 15px;
+    line-height: 1.7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.process-text strong {
+  color: #565555;
+}
+
+.pub-process p,.extra-text {
+  margin-top: 20px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.read-more-btn:hover {
+  background: #084298;
+}
+
+/* journals */
+
+.journal-section {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+/* GRID */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 40px;
+  align-items: center;
+}
+
+/* CARD */
+.journal-card {
+  position: relative;
+  background: #fff;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* LOGO */
+.journal-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(225, 218, 218, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.hover-overlay span {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.journal-card:hover img {
+  transform: scale(1.1);
+
+}
+.journal-card:hover span{
+    color: red;
+}
+
+
+.journal-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Location strips */
+
+.locations-flex {
+  background: #000;
+  padding: 20px 4%;
+}
+
+
+.locations-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 12px;
+  width: fit-content;
+ padding-bottom: 40px;             
+  border-bottom: 2px solid #fff;   
+}
+
+
+.location-item {
+  color: #fff;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.pipe {
+  margin-left: 4px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .top {
+        height: 220px;
+    }
+
+    .overlay {
+        padding-left: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .overlay h1 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .paper-section {
+        padding: 40px 20px;
+    }
+
+    .paper-section h2 {
+        font-size: 24px;
+    }
+
+    .paper-section h4 {
+        font-size: 14px;
+    }
+
+    .paper-section p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .paper-section h3 {
+        font-size: 18px;
+    }
+
+    .journal-badge {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+
+    .publish {
+        padding: 40px 20px;
+    }
+
+    .publish h2 {
+        font-size: 24px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+      .pub-process {
+    padding: 50px 20px;
+  }
+
+  .pub-process h2 {
+    font-size: 24px;
+  }
+    .journal-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+    .top {
+        height: 200px;
+    }
+
+    .overlay h1 {
+        font-size: 18px;
+    }
+
+    .paper-section h2 {
+        font-size: 22px;
+    }
+
+    .journal-list {
+        gap: 8px;
+    }
+
+    .journal-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+      .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    padding: 25px 15px;
+  }
+    .journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
+  }
+}

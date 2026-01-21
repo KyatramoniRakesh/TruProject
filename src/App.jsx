@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Researchpaper from "./Pages/Researchpaper";
 
 import "./App.css";
 
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/research" element={<Researchpaper />} />
       </Routes>
 
       <Footer />

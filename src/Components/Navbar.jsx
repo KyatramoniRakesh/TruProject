@@ -6,20 +6,20 @@ import logo from "../assets/Images/logo.png";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // ✅ Mobile main menus (B.Tech / M.Tech)
+
     const [openMobileMenus, setOpenMobileMenus] = useState({
         btech: false,
         mtech: false,
     });
 
-    // ✅ Branch open state
+
     const [openBranches, setOpenBranches] = useState({
         cse: false,
         ece: false,
         eee: false,
     });
 
-    // ✅ Project open state
+
     const [openProjects, setOpenProjects] = useState({
         btech: {
             cse: { major: false, mini: false },
@@ -63,7 +63,7 @@ const Navbar = () => {
                         <img src={logo} alt="TruProjects" />
                     </Link>
 
-                    {/* HAMBURGER */}
+
                     <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
                     </div>
@@ -97,7 +97,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* ===== M.TECH DESKTOP ===== */}
+
                         <div className="nav-item has-mega">
                             <span className="nav-link">
                                 M.Tech Projects <i className="fas fa-chevron-down"></i>

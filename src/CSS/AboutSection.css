@@ -1,0 +1,143 @@
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.about-container {
+  max-width: 1420px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT IMAGE */
+.about-left img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* TITLE */
+.about-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.about-title span {
+  color: #e91e63;
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 4px;
+}
+
+/* ================= ACCORDION ================= */
+.about-accordion {
+  margin-bottom: 16px;
+}
+
+/* HEADER */
+.about-accordion-header {
+  width: 100%;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 16px 22px;
+  font-size: 18px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.about-accordion-header span {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* BODY */
+.about-accordion-body {
+  border: 1px solid #e91e63;
+  border-top: none;
+  background: #fff;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+
+  transition: max-height 0.8s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.about-accordion-body.open {
+  max-height: 1200px;
+  opacity: 1;
+  padding: 18px 20px;
+}
+
+/* PARAGRAPH */
+.about-accordion-body p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* LIST */
+.about-list {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.about-list li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.about-list li::marker {
+  color: #e91e63;
+  font-size: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 16px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-accordion-header {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  .about-accordion-body p,
+  .about-list li {
+    font-size: 14.5px;
+  }
+}

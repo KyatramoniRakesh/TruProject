@@ -1,0 +1,133 @@
+/* ================= TECHNOLOGY SECTION ================= */
+.technology {
+  padding: 60px 80px;
+  background: #fff;
+}
+
+/* TITLE */
+.tech-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.tech-title span {
+  color: #ff0033;
+  border-bottom: 2px solid #ff0033;
+  padding-bottom: 4px;
+}
+
+/* GRID */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 30px 60px;
+}
+
+/* CARD */
+.tech-card {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 18px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.tech-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* CONTENT */
+.tech-content {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.tech-content h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: rgb(25, 25, 81);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* LINKS */
+.tech-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-links a {
+  font-size: 14px;
+  color: #452e4e;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+
+.tech-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff0033;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.tech-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .technology {
+    padding: 50px 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .technology {
+    padding: 30px 16px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .tech-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tech-card img {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 15px;
+  }
+
+  .tech-content {
+    padding: 0;
+  }
+
+  .tech-links {
+    gap: 12px;
+  }
+}

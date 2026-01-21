@@ -1,0 +1,82 @@
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* SLIDE TRACK */
+.banner-track {
+  display: flex;
+}
+
+/* EACH SLIDE */
+.banner-slide {
+  min-width: 100%;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ARROWS */
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.banner-arrow.left {
+  left: 15px;
+}
+
+.banner-arrow.right {
+  right: 15px;
+}
+
+.banner-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* DOTS */
+.banner-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #ff2b5b;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .banner-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}

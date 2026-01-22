@@ -99,9 +99,9 @@ const Navbar = () => {
 
 
                         <div className="nav-item has-mega">
-                            <span className="nav-link">
+                            <Link to="/mtech-projects" className="nav-link">
                                 M.Tech Projects <i className="fas fa-chevron-down"></i>
-                            </span>
+                            </Link>
                             <div className="mega-menu">
                                 <div className="mega-container">
                                     <div className="mega-column">

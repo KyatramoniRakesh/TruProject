@@ -87,7 +87,7 @@ const About = () => {
         <section className="about-content">
             <div className="about-content-container">
 
-                {/* LEFT IMAGE */}
+               
                 <div className="about-content-left">
                     <img
                         src={about_img}
@@ -95,7 +95,7 @@ const About = () => {
                     />
                 </div>
 
-                {/* RIGHT TEXT */}
+                
                 <div className="about-content-right">
                     <h2 className="about-heading">
                         ABOUT <span>US</span>
@@ -178,7 +178,7 @@ const About = () => {
                 {projects.map((item) => (
                     <div className="project-card" key={item.id}>
 
-                        {/* CLICKABLE THUMBNAIL */}
+                       
                         <a
                             href={item.videoUrl}
                             target="_blank"
@@ -188,7 +188,7 @@ const About = () => {
                             <div className="project-thumb">
                                 <img src={item.thumbnail} alt={item.title} />
 
-                                {/* HOVER OVERLAY */}
+                               
                                 <div className="project-overlay">
                                     <p>
                                         TO PURCHASE THIS PROJECT IN ONLINE <br />
@@ -203,12 +203,12 @@ const About = () => {
                                     </div>
                                 </div>
 
-                                {/* PLAY ICON */}
+                                
                                 <div className="play-btn">▶</div>
                             </div>
                         </a>
 
-                        {/* CONTENT */}
+                        
                         <div className="project-content">
                             <h3>{item.title}</h3>
                             <p className="meta">

@@ -1,0 +1,78 @@
+/* ================= PAGE BANNER ================= */
+
+.page-banner {
+  width: 100%;
+  height: 300px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* DARK GRADIENT OVERLAY */
+.page-banner-overlay {
+  width: 75%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0)
+  );
+
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+/* TITLE */
+.page-banner-overlay h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  max-width: 900px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .page-banner {
+    height: 260px;
+    background-position: center right;
+  }
+
+  .page-banner-overlay {
+    width: 85%;
+    padding: 0 40px;
+  }
+
+  .page-banner-overlay h1 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-banner {
+    height: 220px;
+    background-position: 70% center;
+  }
+
+  .page-banner-overlay {
+    width: 100%;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .page-banner-overlay h1 {
+    font-size: 24px;
+  }
+}

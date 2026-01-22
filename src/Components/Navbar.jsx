@@ -74,9 +74,9 @@ const Navbar = () => {
                         <Link to="/about">About Us</Link>
 
                         <div className="nav-item has-mega">
-                            <span className="nav-link">
+                            <Link to="/btech-projects" className="nav-link">
                                 B.Tech Projects <i className="fas fa-chevron-down"></i>
-                            </span>
+                            </Link>
                             <div className="mega-menu">
                                 <div className="mega-container">
                                     <div className="mega-column">

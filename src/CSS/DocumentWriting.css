@@ -1,0 +1,309 @@
+/* ================= PAGE BANNER ================= */
+
+.page-banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.page-banner-overlay {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.page-banner-overlay h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  max-width: 900px;
+}
+
+/* ================= PLAGIARISM INTRO SECTION ================= */
+
+.plagiarism-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.plagiarism-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.plagiarism-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.plagiarism-title span {
+  color: #e91e63;
+}
+
+.plagiarism-subtitle {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.plagiarism-question {
+  font-size: 28px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.plagiarism-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plagiarism-buttons button {
+  background: #8a8a8a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plagiarism-buttons button:hover {
+  background: #e91e63;
+}
+
+/* ================= PLAGIARISM STEPS ================= */
+
+.plagiarism-steps {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  background-image: url("/assets/Images/bg-pattern.png");
+  background-repeat: repeat;
+  background-size: 280px;
+  background-position: center;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.plagiarism-steps::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  z-index: 0;
+}
+
+.plagiarism-steps > * {
+  position: relative;
+  z-index: 1;
+}
+
+.steps-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #222;
+}
+
+.steps-title span {
+  color: #e91e63;
+}
+
+.steps-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+}
+
+.step-card {
+  background: #fff;
+  padding: 35px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  font-size: 26px;
+  font-weight: 700;
+  color: #e91e63;
+  margin-bottom: 14px;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ================= PLAGIARISM TOOLS ================= */
+
+.plagiarism-tools {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.tools-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.tool-card {
+  border: 1px dashed #ff2c55;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tool-card img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+
+/* Banner */
+@media (max-width: 1024px) {
+  .page-banner {
+    height: 260px;
+    background-position: center right;
+  }
+
+  .page-banner-overlay {
+    width: 70%;
+    padding: 0 40px;
+  }
+
+  .page-banner-overlay h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    height: 220px;
+    background-position: 70% center;
+  }
+
+  .page-banner-overlay {
+    width: 100%;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .page-banner-overlay h1 {
+    font-size: 24px;
+  }
+}
+
+/* Plagiarism Intro */
+@media (max-width: 768px) {
+  .plagiarism-title {
+    font-size: 26px;
+  }
+
+  .plagiarism-question {
+    font-size: 22px;
+  }
+
+  .plagiarism-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* Steps Grid */
+@media (max-width: 1200px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .steps-title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .step-card {
+    padding: 30px 18px;
+  }
+
+  .step-number {
+    font-size: 22px;
+  }
+
+  .step-card p {
+    font-size: 15px;
+  }
+}
+
+/* Tools */
+@media (max-width: 1024px) {
+  .tools-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tools-container {
+    grid-template-columns: 1fr;
+  }
+}

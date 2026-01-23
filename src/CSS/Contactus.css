@@ -255,3 +255,70 @@ select:focus {
 
 }
 
+/* ================= FORM RESPONSIVE FIXES ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact-form input,
+  .contact-form select {
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    height: 50px;
+    font-size: 17px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  form {
+    gap: 22px;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form select {
+    height: 46px;
+    font-size: 15px;
+    padding: 0 14px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 52px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+  .contact-form input,
+  .contact-form select {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  form {
+    gap: 18px;
+  }
+
+  .submit-btn {
+    height: 48px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+}

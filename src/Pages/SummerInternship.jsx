@@ -1,6 +1,6 @@
 import React from 'react';
 import InternshipSection from '../Components/InternshipSection';
-import "../CSS/SummerInternship.css"
+import "../CSS/Summerinternship.css"
 import InternshipTracks from '../Components/InternshipTracks';
 
 

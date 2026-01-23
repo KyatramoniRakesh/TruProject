@@ -1,261 +1,212 @@
-import React from 'react';
-import { useState } from 'react';
-import '../CSS/Contactus.css';
+import React, { useState } from "react";
+import "../CSS/Contactus.css";
 import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaPhone } from "react-icons/fa6";
+import { FaLocationDot, FaPhone } from "react-icons/fa6";
 
 function Contactus() {
-    const [formData, setFormData] = useState({
-        fullname: "",
-        email: "",
-        mobile: "",
-        college: "",
-        city: "",
-        course: "B.Tech",
-        branch: "CSE",
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    mobile: "",
+    college: "",
+    city: "",
+    course: "B.Tech",
+    branch: "CSE",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.fullname.trim()) newErrors.fullname = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email format";
+
+    if (!formData.mobile.trim())
+      newErrors.mobile = "Mobile number is required";
+    else if (!/^[6-9]\d{9}$/.test(formData.mobile))
+      newErrors.mobile = "Enter valid 10-digit number";
+
+    if (!formData.college.trim())
+      newErrors.college = "College name is required";
+    if (!formData.city.trim()) newErrors.city = "City is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    alert("Form submitted successfully!");
+    setFormData({
+      fullname: "",
+      email: "",
+      mobile: "",
+      college: "",
+      city: "",
+      course: "B.Tech",
+      branch: "CSE",
     });
+    setErrors({});
+  };
 
-    const [errors, setErrors] = useState({});
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
+  return (
+    <>
+      <div className="branch-banner">
+        <h1>Contact Us</h1>
+      </div>
 
-    const Validate = () => {
-        const newErrors = {};
-        let isValid = true;
+      <section className="contact-section">
+        <div className="contact-grid">
 
-        if (!formData.fullname.trim()) {
-            newErrors.fullname = "Name is required";
-            isValid = false;
-        }
+          {/* ================= FORM ================= */}
+          <div className="contact-form">
+            <h2>
+              INTERESTED IN <span>DISCUSSING?</span>
+            </h2>
 
-        if (!formData.email.trim()) {
-            newErrors.email = "Email is required";
-            isValid = false;
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = "Invalid email format";
-            isValid = false;
-        }
+            <form onSubmit={handleSubmit}>
+              <div className="form-group full">
+                <label>
+                  Name <span className="required">(Required)</span>
+                </label>
+                <input
+                  type="text"
+                  name="fullname"
+                  placeholder="Name of the Student"
+                  value={formData.fullname}
+                  onChange={handleChange}
+                />
+                {errors.fullname && <small className="error">{errors.fullname}</small>}
+              </div>
 
-        if (!formData.mobile.trim()) {
-            newErrors.mobile = "Mobile number is required";
-            isValid = false;
-        } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
-            newErrors.mobile = "Enter valid 10-digit Indian mobile number";
-            isValid = false;
-        }
+              <div className="form-group">
+                <label>
+                  Phone <span className="required">(Required)</span>
+                </label>
+                <input
+                  type="text"
+                  name="mobile"
+                  maxLength="10"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                />
+                {errors.mobile && <small className="error">{errors.mobile}</small>}
+              </div>
 
-        if (!formData.college.trim()) {
-            newErrors.college = "College name is required";
-            isValid = false;
-        }
+              <div className="form-group">
+                <label>
+                  Email <span className="required">(Required)</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <small className="error">{errors.email}</small>}
+              </div>
 
-        if (!formData.city.trim()) {
-            newErrors.city = "City is required";
-            isValid = false;
-        }
+              <div className="form-group">
+                <label>
+                  College Name <span className="required">(Required)</span>
+                </label>
+                <input
+                  type="text"
+                  name="college"
+                  value={formData.college}
+                  onChange={handleChange}
+                />
+                {errors.college && <small className="error">{errors.college}</small>}
+              </div>
 
-        setErrors(newErrors);
-        return isValid;
-    };
+              <div className="form-group">
+                <label>
+                  City <span className="required">(Required)</span>
+                </label>
+                <input
+                  type="text"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                />
+                {errors.city && <small className="error">{errors.city}</small>}
+              </div>
 
+              <div className="form-group">
+                <label>Course</label>
+                <select name="course" value={formData.course} onChange={handleChange}>
+                  <option>B.Tech</option>
+                  <option>M.Tech</option>
+                  <option>MCA</option>
+                  <option>MBA</option>
+                  <option>BSc</option>
+                  <option>Other</option>
+                </select>
+              </div>
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+              <div className="form-group">
+                <label>Branch</label>
+                <select name="branch" value={formData.branch} onChange={handleChange}>
+                  <option>CSE</option>
+                  <option>ECE</option>
+                  <option>IT</option>
+                  <option>AI-ML</option>
+                  <option>Cyber Security</option>
+                  <option>Other</option>
+                </select>
+              </div>
 
-        const isValid = Validate();
-        if (isValid) {
-            console.log("Form Data:", formData);
-            alert("Form submitted successfully!");
+              <button className="submit-btn">Submit</button>
+            </form>
+          </div>
 
-            setFormData({
-                fullname: "",
-                email: "",
-                mobile: "",
-                college: "",
-                city: "",
-                course: "B.Tech",
-                branch: "CSE",
-            });
+          {/* ================= ADDRESS ================= */}
+          <div className="contact-info">
+            <h2>
+              OUR <span>ADDRESS</span>
+            </h2>
 
-            setErrors({});
-        }
-    };
-
-    const isFormIncomplete = Object.values(formData).some(
-        (val) => !val.trim()
-    );
-    return (
-        <>
-            <div className="branch-banner">
-                <h1>Contact us </h1>
+            <div className="info-card">
+              <FaPhone className="icon" />
+              <div>
+                <h4>Phone</h4>
+                <p>91-9676190678</p>
+              </div>
             </div>
-            <section className="contact-section">
-                <div className="contact-grid">
 
+            <div className="info-card">
+              <FaLocationDot className="icon" />
+              <div>
+                <h4>Address</h4>
+                <p>
+                  407, 4th Floor, Pavani Prestige (R.S Brothers) Building,
+                  Ameerpet, Hyderabad – 500016, India
+                </p>
+              </div>
+            </div>
 
-                    <div className="contact-form">
-                        <h2>INTERESTED IN <span>DISCUSSING?</span></h2>
+            <div className="info-card">
+              <MdEmail className="icon" />
+              <div>
+                <h4>E-Mail</h4>
+                <p>info@truprojects.in</p>
+              </div>
+            </div>
+          </div>
 
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-group full">
-                                <label>Name</label>
-                                <input
-                                    type="text"
-                                    name="fullname"
-                                    placeholder='Name of the student'
-                                    value={formData.fullname}
-                                    onChange={handleChange}
-                                />
-                                {errors.fullname && <small className="error">{errors.fullname}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>Phone</label>
-                                <input
-                                    type="text"
-                                    name="mobile"
-                                    maxLength="10"
-                                    value={formData.mobile}
-                                    onChange={handleChange}
-                                />
-                                {errors.mobile && <small className="error">{errors.mobile}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>Email</label>
-                                <input
-                                    type="text"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                />
-                                {errors.email && <small className="error">{errors.email}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>College Name</label>
-                                <input
-                                    type="text"
-                                    name="college"
-                                    value={formData.college}
-                                    onChange={handleChange}
-                                />
-                                {errors.college && <small className="error">{errors.college}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>City</label>
-                                <input
-                                    type="text"
-                                    name="city"
-                                    value={formData.city}
-                                    onChange={handleChange}
-                                />
-                                {errors.city && <small className="error">{errors.city}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>Course</label>
-                                <select
-                                    name="course"
-                                    value={formData.course}
-                                    onChange={handleChange}
-                                >
-                                    {/* <option value="">Select</option> */}
-                                    <option>B.Tech</option>
-                                    <option>M.Tech</option>
-                                    <option>MCA</option>
-                                    <option>MBA</option>
-                                    <option>BCom</option>
-                                    <option>BSC</option>
-                                    <option>Other</option>
-                                </select>
-                                {errors.course && <small className="error">{errors.course}</small>}
-                            </div>
-
-                            <div className="form-group">
-                                <label>Branch</label>
-                                <select
-                                    name="branch"
-                                    value={formData.branch}
-                                    onChange={handleChange}
-                                >
-                                    {/* <option value="">Select</option> */}
-                                    <option>CSE</option>
-                                    <option>ECE</option>
-                                    <option>AI-ML</option>
-                                    <option>IT</option>
-                                    <option>Cyber Security</option>
-                                    <option>IOT</option>
-                                    <option>Other</option>
-                                </select>
-                                {errors.branch && <small className="error">{errors.branch}</small>}
-                            </div>
-
-                            <button
-                                className="submit-btn"
-                                disabled={isFormIncomplete}
-                            >
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-
-                    {/* ADDRESS */}
-                    <div className="contact-info">
-                        <h2>OUR <span>ADDRESS</span></h2>
-
-                        <div className="info-card">
-                            <span className="icon"><FaPhone /></span>
-                            <div className='ad-content'>
-                                <h4 className='ad-head'>Phone</h4>
-                                <p>9676190678</p>
-                            </div>
-                        </div>
-
-                        <div className="info-card">
-                            <span className="icon"><FaLocationDot /></span>
-                            <div className='ad-content'>
-                                <h4 className='ad-head' >Address</h4>
-                                <p>
-                                    407, 4th Floor, Pavani Prestige (R.S Brothers) Building, Ameerpet,
-                                    Opposite Image Hospital & Beside KLM Fashion Mall.
-                                    Hyderabad, Telangana – 500016, India
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="info-card">
-                            <span className="icon"><MdEmail /></span>
-                            <div className='ad-content'>
-                                <h4 className='ad-head'>E-Mail</h4>
-                                <p>info@truprojects.in</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7610.669445614696!2d78.408556!3d17.491528!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI5JzI5LjUiTiA3OMKwMjQnMzAuOCJF!5e0!3m2!1sen!2sus!4v1769077556882!5m2!1sen!2sus"
-                width="100%"
-                height="350"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Hyderabad"
-            />
-
-        </>
-    )
+        </div>
+      </section>
+    </>
+  );
 }
 
-export default Contactus
+export default Contactus;

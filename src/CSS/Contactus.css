@@ -1,35 +1,35 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BANNER ================= */
 .branch-banner {
   width: 100%;
   height: 260px;
-
-  /* Background image */
-  background-image: url("../assets/Images/aboutbanner.webp"); 
+  background-image: url("../assets/Images/aboutbanner.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 
- 
   display: flex;
   align-items: center;
   padding-left: 60px;
-
   position: relative;
-  background-position: top;
 }
 
-/* Dark overlay for readability */
 .branch-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.35);
 }
 
-/* Text above overlay */
 .branch-banner h1 {
   position: relative;
   z-index: 1;
-
   color: #fff;
   font-size: 36px;
   font-weight: 700;
@@ -37,29 +37,28 @@
   letter-spacing: 1px;
 }
 
-
-/* ===== CONTACT SECTION ===== */
+/* ================= CONTACT SECTION ================= */
 .contact-section {
   padding: 60px 70px;
   background: #fff;
 }
 
-/* GRID LAYOUT */
+/* ================= GRID ================= */
 .contact-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: flex-start;
 }
 
+/* ================= HEADINGS ================= */
 .contact-form h2,
 .contact-info h2 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 35px;
   letter-spacing: 1px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 800;
 }
 
 .contact-form h2 span,
@@ -79,7 +78,7 @@
   background: #e91e63;
 }
 
-/* ===== FORM ===== */
+/* ================= FORM ================= */
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,22 +94,23 @@ form {
   grid-column: span 2;
 }
 
-.contact-form   label {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333333bf;
+label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-/* INPUTS */
-.contact-form  input,
-.contact-form select {
-  height: 40px;
-  padding: 0 12px;
+/* ================= INPUTS ================= */
+input,
+select {
+  height: 42px;
+  padding: 0 14px;
   border: 1px solid #bdbdbd;
   font-size: 14px;
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s;
+  width: 100%;
 }
 
 input:focus,
@@ -118,14 +118,14 @@ select:focus {
   border-color: #e91e63;
 }
 
-/* ERROR MESSAGE */
+/* ================= ERRORS ================= */
 .error {
   color: #d32f2f;
   font-size: 13px;
   margin-top: 5px;
 }
 
-/* SUBMIT BUTTON */
+/* ================= SUBMIT BUTTON ================= */
 .submit-btn {
   grid-column: span 2;
   height: 52px;
@@ -135,7 +135,7 @@ select:focus {
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .submit-btn:hover {
@@ -147,7 +147,7 @@ select:focus {
   cursor: not-allowed;
 }
 
-/* ===== RIGHT SIDE INFO ===== */
+/* ================= RIGHT INFO ================= */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -156,41 +156,40 @@ select:focus {
 
 .info-card {
   display: flex;
-  align-items: flex-start;
   gap: 18px;
   border: 1px solid #d9d9d9;
-  padding: 26px 30px;
+  padding: 26px;
   background: #fff;
 }
 
-/* ICON */
-.info-card .icon {
+.icon {
   font-size: 30px;
   color: #e91e63;
-  margin-top: 2px;
 }
 
-/* TITLE */
 .info-card h4 {
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 6px;
   color: #3f3d3d;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TEXT */
 .info-card p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #291b1bbd;
-    max-width: 97%;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
 }
 
+/* ================= MAP ================= */
+iframe {
+  margin-top: 40px;
+  border: none;
+}
 
+/* ================= TABLETS ================= */
 @media (max-width: 992px) {
   .contact-section {
-    padding: 60px 40px;
+    padding: 50px 40px;
   }
 
   .contact-grid {
@@ -207,32 +206,18 @@ select:focus {
     grid-column: span 1;
   }
 }
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  .info-card {
-    padding: 20px;
-    gap: 14px;
+  .branch-banner {
+    height: 200px;
+    padding-left: 20px;
   }
 
-  .info-card .icon {
-    font-size: 24px;
-    margin-top: 3px;
+  .branch-banner h1 {
+    font-size: 26px;
   }
 
-  .info-card h4 {
-    font-size: 15px;
-  }
-
-  .info-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 100%;
-  }
-
-}
-
-
-@media (max-width: 576px) {
   .contact-section {
     padding: 40px 20px;
   }
@@ -241,84 +226,50 @@ select:focus {
   .contact-info h2 {
     font-size: 24px;
   }
-}
-@media (max-width: 480px) {
 
-  .info-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .info-card .icon {
-    font-size: 26px;
-  }
-
-}
-
-/* ================= FORM RESPONSIVE FIXES ================= */
-
-/* Tablets */
-@media (max-width: 992px) {
-  .contact-form input,
-  .contact-form select {
-    height: 44px;
-    font-size: 15px;
-  }
-
-  .submit-btn {
-    height: 50px;
-    font-size: 17px;
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 768px) {
   form {
-    gap: 22px;
-  }
-
-  .contact-form label {
-    font-size: 14px;
-  }
-
-  .contact-form input,
-  .contact-form select {
-    height: 46px;
-    font-size: 15px;
-    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .submit-btn {
     width: 100%;
-    height: 52px;
-    font-size: 16px;
-    border-radius: 4px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .icon {
+    font-size: 24px;
   }
 }
 
-/* Small mobile */
-@media (max-width: 576px) {
-  .contact-form input,
-  .contact-form select {
-    height: 48px;
-    font-size: 14px;
-  }
-
-  .submit-btn {
-    height: 50px;
-    font-size: 15px;
-  }
-}
-
-/* Extra small devices */
+/* ================= SMALL MOBILE ================= */
 @media (max-width: 480px) {
-  form {
-    gap: 18px;
+  .branch-banner {
+    height: 180px;
+    padding-left: 16px;
+  }
+
+  .branch-banner h1 {
+    font-size: 22px;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .info-card {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .submit-btn {
     height: 48px;
     font-size: 15px;
-    letter-spacing: 0.5px;
   }
 }

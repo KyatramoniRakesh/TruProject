@@ -1,3 +1,43 @@
+.branch-banner {
+  width: 100%;
+  height: 260px;
+
+  /* Background image */
+  background-image: url("../assets/Images/aboutbanner.webp"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ 
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+
+  position: relative;
+  background-position: top;
+}
+
+/* Dark overlay for readability */
+.branch-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Text above overlay */
+.branch-banner h1 {
+  position: relative;
+  z-index: 1;
+
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
 /* ===== CONTACT SECTION ===== */
 .contact-section {
   padding: 60px 70px;

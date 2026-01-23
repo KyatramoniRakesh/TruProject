@@ -3,18 +3,54 @@ import { useState } from "react";
 import PageBanner from "../../Components/PageBanner";
 import "../../CSS/ProjectsHome.css";
 
+import { projectsPageContent } from "../../Data/projectsData.js";
+
+import CSE from "../../assets/Images/Projects/CSE.png";
+import ECE from "../../assets/Images/Projects/ECE.png";
+import EEE from "../../assets/Images/Projects/EEE.webp";
+import Mech from "../../assets/Images/Projects/Mech.webp";
+import Civil from "../../assets/Images/Projects/Civil.png";
 
 const branches = [
-  { name: "CSE", slug: "cse", icon: "💻" },
-  { name: "ECE", slug: "ece", icon: "📡" },
-  { name: "EEE", slug: "eee", icon: "⚡" },
-  { name: "CIVIL", slug: "civil", icon: "🏗️" },
-  { name: "MECH", slug: "mech", icon: "⚙️" },
+  {
+    name: "CSE",
+    slug: "cse",
+    image: CSE,
+  },
+  {
+    name: "ECE",
+    slug: "ece",
+    image: ECE,
+  },
+  {
+    name: "EEE",
+    slug: "eee",
+    image: EEE,
+  },
+  {
+    name: "CIVIL",
+    slug: "civil",
+    image: Civil,
+  },
+  {
+    name: "MECH",
+    slug: "mech",
+    image: Mech,
+  },
 ];
 
 const ProjectsHome = () => {
   const { level } = useParams();
   const [expanded, setExpanded] = useState(false);
+
+  const levelMap = {
+    "btech-projects": "btech",
+    "mtech-projects": "mtech"
+  };
+
+  const pageContent = projectsPageContent[levelMap[level]];
+
+
 
   return (
     <>
@@ -27,34 +63,38 @@ const ProjectsHome = () => {
             {level?.toUpperCase()} <span>PROJECTS</span>
           </h2>
 
+          {/* ===== CARDS ===== */}
           <div className="projects-grid">
             {branches.map((branch) => (
               <div className="project-card" key={branch.slug}>
-                <div className="project-icon">{branch.icon}</div>
+                <img
+                  src={branch.image}
+                  alt={branch.name}
+                  className="project-img"
+                />
 
                 <h3>{branch.name}</h3>
 
                 <Link to={`/${level}/${branch.slug}`}>
-                  <button>View</button>
+                  <button className="view-btn">View</button>
                 </Link>
               </div>
             ))}
           </div>
 
-          <p className="projects-desc">
-            “Focus your entire mind on the project. The sun’s rays do not begin to
-            burn until they are focused.” Even the tiniest activities should be
-            done with your heart, mind, and soul.
-          </p>
-
-          {expanded && (
+          {/* ===== DESCRIPTION ===== */}
+          {pageContent?.shortDesc && (
             <p className="projects-desc">
-              This is the key to achieving success. You might spark your friend’s
-              interest by securing a Project with Tru Projects. Give us a call to
-              learn more about the projects. Because we only work on projects, we
-              stand out by simplifying all aspects of a project’s issues.
+              {pageContent.shortDesc}
             </p>
           )}
+
+          {expanded && pageContent?.longDesc && (
+            <p className="projects-desc">
+              {pageContent.longDesc}
+            </p>
+          )}
+
 
           <button
             className="read-more-btn"
@@ -62,7 +102,6 @@ const ProjectsHome = () => {
           >
             {expanded ? "Read less ↑" : "Read more ↓"}
           </button>
-
 
         </div>
       </section>

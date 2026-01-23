@@ -12,6 +12,9 @@ import Contactus from "./Pages/Contactus";
 import ProjectsHome from "./Pages/Projects/ProjectsHome";
 import BranchProjects from "./Pages/Projects/BranchProjects";
 import ProjectList from "./Pages/Projects/ProjectList";
+import QuickEnquiry from "./Components/Enquiry";
+import SummerInternship from "./Pages/SummerInternship";
+import SummerInternship2 from "./Components/Sum";
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         <Route path="/research" element={<Researchpaper />} />
         <Route path="/documents" element={<DocumentWriting />} />
         <Route path="/contact" element={<Contactus />} />
+        <Route path="/enquiry" element={<QuickEnquiry/>} />
 
         {/* Level */}
         <Route path="/:level" element={<ProjectsHome />} />
@@ -34,8 +38,8 @@ function App() {
         {/* Major / Minor */}
         <Route path="/:level/:branch/:type" element={<ProjectList />} />
 
-
-
+      <Route path="/summer" element={<SummerInternship/>}/>
+       {/* <Route path="/s" element={<SummerInternship2/>}/> */}
       </Routes>
 
       <Footer />

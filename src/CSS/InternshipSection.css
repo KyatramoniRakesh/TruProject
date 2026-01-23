@@ -1,0 +1,144 @@
+.main-section {
+    display: "flex";
+    justify-content: center;
+    padding: "40px 0";
+    background: "#f5f5f5";
+
+}
+
+.internship-section {
+    background: #2599cc;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.internship-container {
+    width: 1100px;
+    max-width: 95%;
+    text-align: center;
+    color: #fff;
+}
+
+/* TITLE */
+.internship-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* TAGS */
+.internship-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.internship-tag {
+    background: #8e8e8e;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* DIVIDER */
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 35px 0;
+}
+
+/* HIGHLIGHT TEXT */
+.internship-highlight {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+/* INFO GRID */
+.internship-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin: 50px 0;
+}
+
+/* INFO CARD */
+.info-card {
+    border: 1px solid #ffffff;
+    padding: 35px 20px;
+    background: transparent;
+    display: block;
+}
+
+.info-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+/* PRICE TEXT */
+.info-card p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+    background: #e91e63;
+    border: none;
+    padding: 12px 32px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SOCIAL ICONS */
+.summer-social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.summer-social-icons i {
+    width: 36px;
+    height: 36px;
+    background: #1f6f9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ADDRESS */
+.internship-address {
+    margin-top: 35px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .internship-info {
+        grid-template-columns: 1fr;
+    }
+
+    .internship-title {
+        font-size: 28px;
+    }
+    .main-section{
+        margin: 20px;
+    }
+}

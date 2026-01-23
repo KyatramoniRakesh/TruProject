@@ -1,0 +1,116 @@
+.internship-tracks {
+  padding: 60px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.track-column {
+  border: 1px solid #ddd;
+  background: #fafafa;
+  max-height: fit-content;
+}
+
+.track-header {
+  background: #ef2f5a;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+}
+
+.section-row {
+  background: #181f2b94;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  margin: 10px 10px;
+}
+
+.accordion-item {
+  border: 1px solid #e3e3e3;
+  margin: 10px 12px;
+  background: #fff;
+}
+
+.accordion-header {
+  width: 100%;
+  background: #1f2c44;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-header:hover {
+  background: #162238;
+}
+
+.int-icon {
+  font-size: 19px;
+}
+
+.icon {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-body ol {
+  margin: 12px 0;
+  padding-left: 18px;
+  text-align: left;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+.accordion-body.open {
+  max-height: 500px;
+  padding: 12px 16px;
+}
+
+@media (max-width: 900px) {
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-tracks {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+.internship-tracks {
+  padding: 20px 10px;
+  background: #fff;
+  text-align: center;
+}
+}

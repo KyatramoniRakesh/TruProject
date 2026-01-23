@@ -1,11 +1,13 @@
 import "../CSS/PageBanner.css";
-import bgImage from "../assets/Images/aboutbanner.webp";
+import defaultBanner from "../assets/Images/aboutbanner.webp";
 
 const PageBanner = ({ title, bgImage }) => {
+  const bannerImage = bgImage || defaultBanner;
+
   return (
     <section
       className="page-banner"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={{ backgroundImage: `url(${bannerImage})` }}
     >
       <div className="page-banner-overlay">
         <h1>{title}</h1>

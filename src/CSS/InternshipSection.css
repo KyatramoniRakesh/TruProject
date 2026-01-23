@@ -1,111 +1,148 @@
+/* =========================
+   MAIN
+========================= */
 .main-section {
-    display: "flex";
-    justify-content: center;
-    padding: "40px 0";
-    background: "#f5f5f5";
-
+    background: #ffff;
 }
 
+/* =========================
+   BLUE SECTION
+========================= */
 .internship-section {
     background: #2599cc;
-    padding: 70px 0;
-    display: flex;
-    justify-content: center;
-    
+    padding: 40px 20px;
+    max-width: 1200px;
+
+    /* 👇 THIS CENTERS THE BOX */
+    margin: 0 auto;
 }
 
 .internship-container {
-    width: 1100px;
-    max-width: 95%;
+    max-width: 1200px;
+    margin: auto;
     text-align: center;
     color: #fff;
 }
 
-/* TITLE */
+/* =========================
+   TITLE
+========================= */
 .internship-title {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
-/* TAGS */
+/* =========================
+   DOMAIN TAGS
+========================= */
 .internship-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 30px;
 }
 
 .internship-tag {
     background: #8e8e8e;
-    padding: 7px 14px;
+    padding: 8px 18px;
     border-radius: 4px;
     font-size: 14px;
-    color: #fff;
+    cursor: pointer;
 }
 
-/* DIVIDER */
+.single-domain {
+    cursor: default;
+}
+
+/* =========================
+   DIVIDER
+========================= */
 .divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
     margin: 35px 0;
 }
 
-/* HIGHLIGHT TEXT */
+/* =========================
+   HIGHLIGHT TEXT
+========================= */
 .internship-highlight {
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 15px;
 }
 
-/* INFO GRID */
+/* =========================
+   INFO GRID
+========================= */
 .internship-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    margin: 50px 0;
+    gap: 45px;
+    margin: 70px 0;
 }
 
-/* INFO CARD */
+
+/* =========================
+   INFO CARDS (WHITE)
+========================= */
 .info-card {
+    background: #2599cc;
     border: 1px solid #ffffff;
-    padding: 35px 20px;
-    background: transparent;
-    display: block;
+    padding: 40px 25px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .info-card h3 {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 18px;
-    color: #fff;
+    color: #ffffff;
+    /* WHITE HEADING */
 }
 
-/* PRICE TEXT */
+
 .info-card p {
     font-size: 16px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 10px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
 }
 
-/* REGISTER BUTTON */
+
+/* =========================
+   REGISTER BUTTON
+========================= */
 .register-btn {
     background: #e91e63;
     border: none;
-    padding: 12px 32px;
-    color: #fff;
+    padding: 16px 36px;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
 }
 
-/* SOCIAL ICONS */
+.register-btn:hover {
+    background: #c2185b;
+}
+
+
+/* =========================
+   SOCIAL ICONS
+========================= */
 .summer-social-icons {
     display: flex;
-    gap: 12px;
     justify-content: center;
-    margin-top: 12px;
+    gap: 12px;
+    margin-top: 14px;
 }
 
 .summer-social-icons i {
@@ -116,29 +153,78 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
+    color: #ffffff;
     font-size: 16px;
-    color: #fff;
     cursor: pointer;
 }
 
-/* ADDRESS */
+.summer-social-icons i:hover {
+    background: #155b82;
+}
+
+/* =========================
+   ADDRESS
+========================= */
 .internship-address {
-    margin-top: 35px;
+    margin-top: 45px;
     font-size: 14px;
     line-height: 1.6;
     color: #000;
 }
 
-/* MOBILE */
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-domain-section {
+    background: #ffffff;
+    padding: 90px 20px;
+
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: block;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+}
+
+.about-title span {
+    color: #e91e63;
+    border-bottom: 3px solid #e91e63;
+}
+
+.about-description {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
+
+    .internship-section {
+        margin: 10px;
+    }
+
     .internship-info {
         grid-template-columns: 1fr;
     }
 
-    .internship-title {
-        font-size: 28px;
+    .internship-title,
+    .about-title {
+        font-size: 26px;
     }
-    .main-section{
-        margin: 20px;
+
+    .register-btn {
+        padding: 14px 30px;
     }
 }

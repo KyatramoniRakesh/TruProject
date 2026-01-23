@@ -14,7 +14,7 @@ import BranchProjects from "./Pages/Projects/BranchProjects";
 import ProjectList from "./Pages/Projects/ProjectList";
 import QuickEnquiry from "./Components/Enquiry";
 import SummerInternship from "./Pages/SummerInternship";
-import SummerInternship2 from "./Components/Sum";
+
 
 function App() {
   return (

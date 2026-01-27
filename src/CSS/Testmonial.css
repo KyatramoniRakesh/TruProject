@@ -229,3 +229,31 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .youtube-cta {
+    background-position: center top;
+    background-size: contain;
+    padding: 60px 20px;
+  }
+
+  .youtube-cta-container {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .youtube-cta {
+    padding: 40px 12px;
+    background-size: 220px auto;
+  }
+
+  .youtube-cta-box {
+    padding: 30px 20px;
+  }
+
+  .btn-text,
+  .btn-icon {
+    font-size: 18px;
+  }
+}

@@ -109,6 +109,7 @@
   .tech-card {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 15px;
   }
 
   .tech-card img {

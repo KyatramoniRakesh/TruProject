@@ -49,17 +49,17 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="about-section">
-      <div className="about-container">
+    <section className="tp-about-section">
+      <div className="tp-about-container">
 
         {/* LEFT IMAGE */}
-        <div className="about-left">
+        <div className="tp-about-left">
           <img src={ban1} alt="About Tru Projects" />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="about-right">
-          <h2 className="about-title">
+        <div className="tp-about-right">
+          <h2 className="tp-about-title">
             ABOUT <span>US</span>
           </h2>
 
@@ -67,21 +67,27 @@ const AboutSection = () => {
             const isOpen = openIndexes.includes(index);
 
             return (
-              <div className="about-accordion" key={index}>
+              <div className="tp-about-accordion" key={index}>
                 <button
-                  className="about-accordion-header"
+                  className="tp-about-accordion-header"
                   onClick={() => handleToggle(index)}
                 >
                   {item.title}
                   <span>{isOpen ? "−" : "+"}</span>
                 </button>
 
-                <div className={`about-accordion-body ${isOpen ? "open" : ""}`}>
+                <div
+                  className={`tp-about-accordion-body ${
+                    isOpen ? "tp-open" : ""
+                  }`}
+                >
                   {item.type === "paragraph" &&
-                    item.content.map((text, i) => <p key={i}>{text}</p>)}
+                    item.content.map((text, i) => (
+                      <p key={i}>{text}</p>
+                    ))}
 
                   {item.type === "list" && (
-                    <ul className="about-list">
+                    <ul className="tp-about-list">
                       {item.content.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}

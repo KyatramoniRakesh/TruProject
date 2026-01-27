@@ -1,4 +1,6 @@
 import "../CSS/Services.css";
+import { Link } from "react-router-dom";
+
 
 import btech from "../assets/Images/Services/B.tech_-1.png";
 import mtech from "../assets/Images/Services/Mtech-1.png";
@@ -12,23 +14,24 @@ import internship from "../assets/Images/Services/01.webp";
 import training from "../assets/Images/Services/06.webp";
 
 const services = [
-  { title: "B.Tech Projects", icon: btech },
-  { title: "M.Tech Projects", icon: mtech },
-  { title: "Mini Projects", icon: mini },
-  { title: "Major Projects", icon: major },
-  { title: "IEEE Projects", icon: ieee },
-  { title: "Bulk Sale", icon: bulk },
-  { title: "Paper writing & Publishing", icon: paper },
-  { title: "Document writing with plagiarism", icon: document },
-  { title: "Summer Internships", icon: internship },
-  { title: "Trainings", icon: training },
+  { title: "B.Tech Projects", icon: btech, link: "/btech-projects" },
+  { title: "M.Tech Projects", icon: mtech, link: "/mtech-projects" },
+  { title: "Mini Projects", icon: mini, link: "/mini-projects" },
+  { title: "Major Projects", icon: major, link: "/major-projects" },
+  { title: "IEEE Projects", icon: ieee, link: "/ieee-projects" },
+  { title: "Bulk Sale", icon: bulk, link: "/bulk-sale" },
+  { title: "Paper writing & Publishing", icon: paper, link: "/paper-writing" },
+  { title: "Document writing with plagiarism", icon: document, link: "/document-writing" },
+  { title: "Summer Internships", icon: internship, link: "/internships" },
+  { title: "Trainings", icon: training, link: "/trainings" },
 ];
+
 
 const Services = () => {
   return (
     <section className="services">
       <div className="services-container">
-        {/* HEADING */}
+
         <div className="services-header">
           <h2>
             OUR <span>SERVICES</span>
@@ -36,15 +39,20 @@ const Services = () => {
           <div className="underline"></div>
         </div>
 
-        {/* GRID */}
+
         <div className="services-grid">
           {services.map((service, index) => (
-            <div className="service-card" key={index}>
+            <Link
+              to={service.link}
+              className="service-card"
+              key={index}
+            >
               <img src={service.icon} alt={service.title} />
               <p>{service.title}</p>
-            </div>
+            </Link>
           ))}
         </div>
+
       </div>
     </section>
   );

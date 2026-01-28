@@ -6,7 +6,7 @@ import DM from "../assets/Images/Projects/Data-Mining.webp"
 
 
 export const projectsData = [
- 
+
 
   {
     id: 1,
@@ -17,6 +17,16 @@ export const projectsData = [
     title: "AI Based Attendance System",
     image: ML,
   },
+  {
+    id: 99,
+    level: "btech",
+    branch: "cse",
+    type: "major",
+    category: "Machine Learning",
+    title: "New ML Project Title",
+    image: ML,
+  },
+
   {
     id: 2,
     level: "btech",

@@ -2,15 +2,17 @@ import { useParams } from "react-router-dom";
 import PageBanner from "../../Components/PageBanner";
 import { projectsData } from "../../Data/projectsData";
 import "../../CSS/ProjectList.css";
+import { Link } from "react-router-dom";
+
 
 const ProjectList = () => {
   const { level, branch, type } = useParams();
 
-  // ✅ NORMALIZE PARAMS
+  
   const normalizedLevel = level?.replace("-projects", "");
   const normalizedType = type?.replace("-projects", "");
 
-  // ✅ FILTER PROJECTS
+ 
   const filteredProjects = projectsData.filter(
     (p) =>
       p.level === normalizedLevel &&
@@ -18,7 +20,7 @@ const ProjectList = () => {
       p.type === normalizedType
   );
 
-  // ✅ GROUP BY CATEGORY
+  
   const categories = [
     ...new Map(
       filteredProjects.map((item) => [item.category, item])
@@ -54,9 +56,14 @@ const ProjectList = () => {
                       {cat.category}
                     </h3>
 
-                    <button className="view-btn">
-                      View
-                    </button>
+                    <Link
+                      to={`/${level}/${branch}/${type}/${cat.category
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                    >
+                      <button className="view-btn">View</button>
+                    </Link>
+
 
                   </div>
                 </div>

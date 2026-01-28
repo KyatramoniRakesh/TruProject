@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../CSS/Technologies.css";
 
 import tech1 from "../assets/Images/machinelearning-1.webp";
@@ -12,7 +13,6 @@ import tech9 from "../assets/Images/t9.jpg";
 import tech10 from "../assets/Images/t10.jpg";
 import tech11 from "../assets/Images/t11.jpg";
 import tech12 from "../assets/Images/t12.jpg";
-
 
 const technologies = [
   { id: 1, title: "Machine Learning", image: tech1 },
@@ -29,6 +29,10 @@ const technologies = [
   { id: 12, title: "Android", image: tech12 },
 ];
 
+// helper → convert title to URL slug
+const toSlug = (title) =>
+  title.toLowerCase().replace(/\s+/g, "-");
+
 const Technology = () => {
   return (
     <section className="technology">
@@ -37,21 +41,46 @@ const Technology = () => {
       </h2>
 
       <div className="tech-grid">
-        {technologies.map((tech) => (
-          <div className="tech-card" key={tech.id}>
-            <img src={tech.image} alt={tech.title} />
+        {technologies.map((tech) => {
+          const slug = toSlug(tech.title);
 
-            <div className="tech-content">
-              <h3>{tech.title}</h3>
+          return (
+            <div className="tech-card" key={tech.id}>
+              <img src={tech.image} alt={tech.title} />
 
-              <div className="tech-links">
-                <a href="#">Mini Project</a>
-                <a href="#">Major Project</a>
-                <a href="#">View Project Titles</a>
+              <div className="tech-content">
+                <h3>{tech.title}</h3>
+
+                <div className="tech-links">
+                  {/* MINI PROJECTS */}
+                  <Link
+                    to={`/btech-projects/cse/minor/${slug}`}
+                  >
+                    Mini Project
+                  </Link>
+
+                  <span>|</span>
+
+                  {/* MAJOR PROJECTS */}
+                  <Link
+                    to={`/btech-projects/cse/major/${slug}`}
+                  >
+                    Major Project
+                  </Link>
+
+                  <span>|</span>
+
+                  {/* ALL PROJECT TITLES */}
+                  <Link
+                    to={`/btech-projects/cse/all/${slug}`}
+                  >
+                    View Project Titles
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

@@ -277,3 +277,47 @@ export const projectsPageContent = {
   },
 
 };
+
+
+export const categoryDescriptions = {
+  "Machine Learning": {
+    title: "About Machine Learning Projects",
+    description: `
+Machine Learning projects focus on building intelligent systems that can
+learn from data and make predictions or decisions without being explicitly
+programmed. These projects cover concepts such as supervised learning,
+unsupervised learning, classification, regression, clustering, and model
+evaluation using real-world datasets.
+`
+  },
+
+  "Artificial Intelligence": {
+    title: "About Artificial Intelligence Projects",
+    description: `
+Artificial Intelligence projects aim to simulate human intelligence using
+algorithms and computational models. These projects include problem-solving,
+knowledge representation, reasoning, natural language processing, and
+intelligent decision-making systems used in real-world applications.
+`
+  },
+
+  "Web Development": {
+    title: "About Web Development Projects",
+    description: `
+Web Development projects involve designing and building responsive,
+interactive, and scalable websites or web applications. These projects
+typically use technologies like HTML, CSS, JavaScript, React, Node.js,
+databases, and APIs to solve real business problems.
+`
+  },
+
+  "Data Science": {
+    title: "About Data Science Projects",
+    description: `
+Data Science projects focus on extracting insights from structured and
+unstructured data using statistical analysis, data visualization, and
+machine learning techniques. These projects help in decision-making and
+predictive analytics across industries.
+`
+  }
+};

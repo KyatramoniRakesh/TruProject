@@ -129,6 +129,15 @@
   color: #9a9a9a;
   line-height: 1.7;
 }
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ff2b5b;
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {

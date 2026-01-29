@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/Navbar.css";
 import logo from "../assets/Images/logo.png";
+import { FaFacebookF, FaLinkedinIn, FaYoutube, FaPinterestP, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiArrowRight } from "react-icons/fi";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,15 +43,38 @@ const Navbar = () => {
       {/* ================= TOP BAR ================= */}
       <div className="topbar">
         <div className="topbar-container">
-          <div className="topbar-left">
-            <span>91-9676190678</span>
-            <span>info@truprojects.in</span>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+
+
+
+            <div className="topbar-left">
+              <span>91-9676190678</span>
+              <span>info@truprojects.in</span>
+            </div>
+
+
+            <div className="topbar-center">
+              <a href="https://www.facebook.com/truprojects1/"><FaFacebookF /></a>
+              <a href="https://x.com/"><FaXTwitter /></a>
+              <a href="https://www.linkedin.com/company/tru-projects/"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/channel/UCcwZ26sm2QtHjilZjCENIAg"><FaYoutube /></a>
+              <a href="https://in.pinterest.com/truprojects/"><FaPinterestP /></a>
+              <a href="https://www.instagram.com/tru_projects/"><FaInstagram /></a>
+            </div>
           </div>
+
+
           <div className="topbar-right">
-            <Link to="/enquiry" onClick={closeMenu}>
-              <button className="register-btn">Register Now</button>
+            <Link to="/enquiry" className="reg-link">
+              <button className="reg-btn">
+                <span className="btn-text">Register Now</span>
+                <span className="btn-icon">
+                  <FiArrowRight />
+                </span>
+              </button>
             </Link>
           </div>
+
         </div>
       </div>
 

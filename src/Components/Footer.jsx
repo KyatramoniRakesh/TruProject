@@ -1,14 +1,16 @@
 import "../CSS/Footer.css";
-
+import { FaFacebookF, FaLinkedinIn, FaYoutube, FaPinterestP, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-overlay">
 
-       
+
         <div className="footer-container">
 
-         
+
           <div className="footer-col">
             <h3>About Us</h3>
             <p>
@@ -39,16 +41,16 @@ const Footer = () => {
             </div>
 
             <div className="footer-socials">
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-x-twitter"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-linkedin-in"></i>
-              <i className="fab fa-youtube"></i>
-              <i className="fab fa-pinterest-p"></i>
+              <a href="https://www.facebook.com/truprojects1/"><FaFacebookF /></a>
+              <a href="https://x.com/"><FaXTwitter /></a>
+              <a href="https://www.linkedin.com/company/tru-projects/"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/channel/UCcwZ26sm2QtHjilZjCENIAg"><FaYoutube /></a>
+              <a href="https://in.pinterest.com/truprojects/"><FaPinterestP /></a>
+              <a href="https://www.instagram.com/tru_projects/"><FaInstagram /></a>
             </div>
           </div>
 
-          
+
           <div className="footer-col footer-links">
             <h3>Quick Links</h3>
 
@@ -98,7 +100,7 @@ const Footer = () => {
 
         </div>
 
-       
+
         <div className="footer-bottom">
           <p>© Copyright – 2025 TruProjects. All Rights Reserved.</p>
           <p><strong>Visitors Count:</strong> 1429990</p>

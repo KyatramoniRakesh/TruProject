@@ -59,7 +59,7 @@
   margin-top: 22px;
 }
 
-.footer-socials i {
+.footer-socials a {
   width: 38px;
   height: 38px;
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.footer-socials i:hover {
+.footer-socials a:hover {
   background: #ff2b5b;
   border-color: #2b151a;
 }

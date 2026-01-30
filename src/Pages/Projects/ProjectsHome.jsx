@@ -2,7 +2,6 @@ import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import PageBanner from "../../Components/PageBanner";
 import "../../CSS/ProjectsHome.css";
-
 import { projectsPageContent } from "../../Data/projectsData.js";
 
 import CSE from "../../assets/Images/Projects/CSE.png";
@@ -10,6 +9,10 @@ import ECE from "../../assets/Images/Projects/ECE.png";
 import EEE from "../../assets/Images/Projects/EEE.webp";
 import Mech from "../../assets/Images/Projects/Mech.webp";
 import Civil from "../../assets/Images/Projects/Civil.png";
+
+import LocationStrip from "../../Components/LocationStrip";
+import { LOCATIONS } from "../../Data/locations";
+
 
 const branches = [
   {
@@ -50,11 +53,18 @@ const ProjectsHome = () => {
 
   const pageContent = projectsPageContent[levelMap[level]];
 
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const currentLevel = levelMap[level];
+  const locations = LOCATIONS[currentLevel] || [];
+
 
 
   return (
     <>
-      <PageBanner title={`${level?.toUpperCase()} PROJECTS`} />
+      <PageBanner
+        title={`${level?.toUpperCase()} PROJECTS${selectedLocation ? ` - ${selectedLocation}` : ""}`}
+      />
+
 
       <section className="projects-main">
         <div className="projects-container">
@@ -82,7 +92,7 @@ const ProjectsHome = () => {
             ))}
           </div>
 
-          {/* ===== DESCRIPTION ===== */}
+
           {pageContent?.shortDesc && (
             <p className="projects-desc">
               {pageContent.shortDesc}
@@ -105,6 +115,14 @@ const ProjectsHome = () => {
 
         </div>
       </section>
+      {!selectedLocation && locations.length > 0 && (
+        <LocationStrip
+          locations={locations}
+          label={`${currentLevel?.toUpperCase()} Projects`}
+          onSelect={setSelectedLocation}
+        />
+      )}
+
     </>
   );
 };

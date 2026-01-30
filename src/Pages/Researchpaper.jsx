@@ -3,8 +3,13 @@ import '../CSS/Research.css';
 
 import research from '../assets/Images/p6.png';
 import Logo1 from '../assets/Images/advanced.png';
-import Logo2 from '../assets/Images/advanced.png';
-import Logo3 from '../assets/Images/advanced.png';
+import Logo2 from '../assets/Images/i20r.png';
+import Logo3 from '../assets/Images/i.png';
+import Logo4 from '../assets/Images/ijaent.png';
+import Logo5 from '../assets/Images/n.jpg';
+import Logo6 from '../assets/Images/ijatir.png';
+import Logo7 from '../assets/Images/ijca-400x284.jpg';
+import Logo8 from '../assets/Images/ijeat-400x284.jpg';
 
 import { FaPlusCircle } from "react-icons/fa";
 
@@ -38,14 +43,8 @@ function Researchpaper() {
         { no: "09", text: "Getting paper published" },
     ];
 
-    const logos = [Logo1, Logo2, Logo3, Logo1, Logo2, Logo3, Logo1, Logo2, Logo3];
+    const logos = [Logo1, Logo2, Logo3, Logo4,Logo5, Logo6, Logo7, Logo8, ];
 
-    // const locations = [
-    //     "Vizag", "Vijayawada", "Delhi", "Anantapur", "Bangalore", "Chennai",
-    //     "Tirupati", "Kakinada", "Guntur", "Itanagar", "Dispur", "Patna",
-    //     "Raipur", "Panaji", "Gandhinagar", "Chandigarh", "Shimla",
-    //     "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai"
-    // ];
 
     const locations = LOCATIONS.research;
 

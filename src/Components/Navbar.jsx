@@ -102,26 +102,32 @@ const Navbar = () => {
 
             {/* ================= BTECH MEGA ================= */}
             <div className="nav-item has-mega">
-              <Link to="/btech" className="nav-link">
+              <Link to="/btech-projects" className="nav-link">
                 B.Tech Projects <i className="fas fa-chevron-down"></i>
               </Link>
 
               <div className="mega-menu">
                 <div className="mega-container">
                   <div className="mega-column">
-                    <h4>CSE</h4>
+                    <Link to="/btech-projects/cse">
+                      <h4 className="branch-link">CSE</h4>
+                    </Link>
                     <Link to="/btech/cse/major">Major Projects</Link>
                     <Link to="/btech/cse/minor">Mini Projects</Link>
                   </div>
 
                   <div className="mega-column">
-                    <h4>ECE</h4>
+                    <Link to="/btech-projects/ece">
+                      <h4 className="branch-link">ECE</h4>
+                    </Link>
                     <Link to="/btech/ece/major">Major Projects</Link>
                     <Link to="/btech/ece/minor">Mini Projects</Link>
                   </div>
 
                   <div className="mega-column">
-                    <h4>EEE</h4>
+                    <Link to="/btech-projects/eee">
+                      <h4 className="branch-link">EEE</h4>
+                    </Link>
                     <Link to="/btech/eee/major">Major Projects</Link>
                     <Link to="/btech/eee/minor">Mini Projects</Link>
                   </div>
@@ -131,26 +137,35 @@ const Navbar = () => {
 
             {/* ================= MTECH MEGA ================= */}
             <div className="nav-item has-mega">
-              <Link to="/mtech" className="nav-link">
+              <Link to="/mtech-projects" className="nav-link">
                 M.Tech Projects <i className="fas fa-chevron-down"></i>
               </Link>
 
               <div className="mega-menu">
                 <div className="mega-container">
                   <div className="mega-column">
-                    <h4>CSE</h4>
+                    <Link to="/mtech-projects/cse">
+                      <Link to="/mtech-projects/cse">
+                      <h4 className="branch-link">CSE</h4>
+                    </Link>
+                    </Link>
+
                     <Link to="/mtech/cse/major">Major Projects</Link>
                     <Link to="/mtech/cse/minor">Mini Projects</Link>
                   </div>
 
                   <div className="mega-column">
-                    <h4>ECE</h4>
+                    <Link to="/mtech-projects/ece">
+                      <h4 className="branch-link">ECE</h4>
+                    </Link>
                     <Link to="/mtech/ece/major">Major Projects</Link>
                     <Link to="/mtech/ece/minor">Mini Projects</Link>
                   </div>
 
                   <div className="mega-column">
-                    <h4>EEE</h4>
+                    <Link to="/mtech-projects/eee">
+                      <h4 className="branch-link">EEE</h4>
+                    </Link>
                     <Link to="/mtech/eee/major">Major Projects</Link>
                     <Link to="/mtech/eee/minor">Mini Projects</Link>
                   </div>

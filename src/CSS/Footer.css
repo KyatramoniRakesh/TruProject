@@ -137,7 +137,15 @@
 .footer-links a:hover {
   color: #ff2b5b;
 }
-
+.contact-icon{
+  font-size: 1.4rem;
+   color: #fff;
+}
+.contact-icon:hover {
+  /* background-color: #ffffff; */
+  color: #fff;
+  transition: 0.3s ease;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {

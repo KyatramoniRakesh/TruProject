@@ -48,9 +48,15 @@ const Navbar = () => {
 
 
             <div className="topbar-left">
-              <span>91-9676190678</span>
-              <span>info@truprojects.in</span>
+              <a href="tel:+919676190678" className="topbar-link">
+                +91-9676190678
+              </a>
+
+              <a href="mailto:info@truprojects.in" className="topbar-link">
+                info@truprojects.in
+              </a>
             </div>
+
 
 
             <div className="topbar-center">
@@ -146,8 +152,8 @@ const Navbar = () => {
                   <div className="mega-column">
                     <Link to="/mtech-projects/cse">
                       <Link to="/mtech-projects/cse">
-                      <h4 className="branch-link">CSE</h4>
-                    </Link>
+                        <h4 className="branch-link">CSE</h4>
+                      </Link>
                     </Link>
 
                     <Link to="/mtech/cse/major">Major Projects</Link>

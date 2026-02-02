@@ -5,7 +5,9 @@ import {
   FaYoutube,
   FaPinterestP,
   FaInstagram,
+  FaHome, FaPhoneAlt
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -27,7 +29,10 @@ const Footer = () => {
             <h3 className="contact-title">Contact</h3>
 
             <div className="contact-item">
-              <span>
+              <span className="contact-icon">
+                <FaHome />
+              </span>
+              <span className="contact-text">
                 407, 4th Floor, Pavani Prestige (R.S Brothers) Building,
                 Ameerpet, Opposite Image Hospital & Beside KLM Fashion Mall,
                 Hyderabad, Telangana – 500016
@@ -35,11 +40,17 @@ const Footer = () => {
             </div>
 
             <div className="contact-item">
-              <span>91-9676190678</span>
+              <span className="contact-icon">
+                <FaPhoneAlt />
+              </span>
+              <span className="contact-text">91-9676190678</span>
             </div>
 
             <div className="contact-item">
-              <span>info@truprojects.in</span>
+              <span className="contact-icon">
+                <MdEmail />
+              </span>
+              <span className="contact-text">info@truprojects.in</span>
             </div>
 
             <div className="footer-socials">
@@ -72,7 +83,7 @@ const Footer = () => {
                 <li><Link to="/mtech-projects/cse/major">M.Tech CSE Major Projects</Link></li>
 
                 <li><Link to="/btech-projects/cse/major">Final Year Projects</Link></li>
-                <li><Link to="/btech-projects/cse/major">IEEE Projects</Link></li>
+                <li><Link to="/btech-projects/eee">IEEE Projects</Link></li>
               </ul>
 
               <ul>

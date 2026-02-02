@@ -1,0 +1,168 @@
+/* ================= TERMS SECTION ================= */
+.terms-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.terms-container {
+  max-width: 1400px;
+  margin: auto;
+  line-height: 1.6;
+  color: #444;
+  font-size: 16px;
+}
+
+/* INTRO */
+.terms-intro {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* LINKS */
+.terms-container a {
+  color: #e91e63;
+  text-decoration: none;
+  margin-left: 4px;
+}
+a{
+  color: #e91e63;
+}
+.terms-container a:hover {
+  text-decoration: underline;
+}
+
+/* TITLES */
+.terms-title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  /* color: #e91e63; */
+  position: relative;
+}
+
+.terms-title span {
+  color: #e91e63;
+}
+
+/* UNDERLINE */
+.terms-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e91e63;
+  margin-top: 8px;
+}
+
+/* LIST */
+.terms-list {
+  margin: 20px 0 30px 20px;
+}
+
+.terms-list li {
+  margin-bottom: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .terms-title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .terms-section {
+    padding: 50px 16px;
+  }
+
+  .terms-container {
+    font-size: 15px;
+  }
+
+  .terms-title {
+    font-size: 24px;
+  }
+}
+
+
+
+
+.about-banner {
+  width: 100%;
+  height: 280px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  background-position: top;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.about-banner-overlay {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.087),
+    rgba(0, 0, 0, 0.084),
+    rgba(0, 0, 0, 0)
+  );
+
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+
+.about-banner-overlay h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width: 1024px) {
+  .about-banner {
+    height: 240px;
+    background-position: center bottom;
+  }
+
+  .about-banner-overlay {
+    padding: 0 40px;
+  }
+
+  .about-banner-overlay h1 {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-banner {
+    height: 200px;
+
+    background-position: 70% bottom;
+  }
+
+  .about-banner-overlay {
+    padding: 0 20px;
+  }
+
+  .about-banner-overlay h1 {
+    font-size: 26px;
+  }
+}
+

@@ -51,13 +51,10 @@ const AboutSection = () => {
   return (
     <section className="tp-about-section">
       <div className="tp-about-container">
-
-        {/* LEFT IMAGE */}
         <div className="tp-about-left">
           <img src={ban1} alt="About Tru Projects" />
         </div>
 
-        {/* RIGHT CONTENT */}
         <div className="tp-about-right">
           <h2 className="tp-about-title">
             ABOUT <span>US</span>

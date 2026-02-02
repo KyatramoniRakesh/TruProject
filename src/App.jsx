@@ -15,7 +15,8 @@ import ProjectList from "./Pages/Projects/ProjectList";
 import QuickEnquiry from "./Components/Enquiry";
 import SummerInternship from "./Pages/SummerInternship";
 import CategoryProjectsTable from "./Pages/Projects/CategoryProjectsTable";
-
+import TermsAndConditions from "./Components/TermsAndConditions";
+import Privacy from "./Components/Privacy";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           element={<CategoryProjectsTable />}
         />
 
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
 
       </Routes>
 

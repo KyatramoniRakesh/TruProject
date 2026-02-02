@@ -83,7 +83,7 @@ const Footer = () => {
                 <li><Link to="/mtech-projects/cse/major">M.Tech CSE Major Projects</Link></li>
 
                 <li><Link to="/btech-projects/cse/major">Final Year Projects</Link></li>
-                <li><Link to="/btech-projects/eee">IEEE Projects</Link></li>
+                <li><Link to="/ieee-projects">IEEE Projects</Link></li>
               </ul>
 
               <ul>
